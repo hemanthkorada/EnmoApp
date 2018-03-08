@@ -1,0 +1,6 @@
+framework module enmo_sdk {
+  umbrella header "enmo_sdk.h"
+
+  export *
+  module * { export * }
+}
