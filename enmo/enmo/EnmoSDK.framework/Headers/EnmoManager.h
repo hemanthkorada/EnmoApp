@@ -1,8 +1,8 @@
 //
 //  EnmoManager.h
-//  enmo_sdk
+//  EnmoSDK
 //
-//  Created by APPLE on 07/03/18.
+//  Created by APPLE on 14/03/18.
 //  Copyright © 2018 APPLE. All rights reserved.
 //
 
@@ -10,6 +10,10 @@
 
 @interface EnmoManager : NSObject
 
++ (EnmoManager*) shared;
 
+- ( void ) start3rdPartyRanging;
+
+- ( void ) stop3rdPartyRanging;
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
-#import <enmo_sdk/enmo_sdk.h>
+
+#import "EnmoSDK/EnmoSDK.h"
+
+
 
 @interface ViewController ()
 
@@ -18,8 +21,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    EnmoManager *ww = [EnmoManager new];
+    
+    
+    [EnmoManager.shared  start3rdPartyRanging];
+    [EnmoManager.shared  stop3rdPartyRanging];
 
+    
+    
+   // EnmoManager *fdsfv = [EnmoManager new];
+    
+
+    
+
+
+    
+   // [.shared start3rdPartyRanging];
+
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

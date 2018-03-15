@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B6A99020595BD600965C81 /* EnmoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B6A98F20595BD600965C81 /* EnmoSDK.framework */; };
 		18E2ED0C2050322300904A97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2ED0B2050322300904A97 /* AppDelegate.m */; };
 		18E2ED0F2050322300904A97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2ED0E2050322300904A97 /* ViewController.m */; };
 		18E2ED122050322300904A97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E2ED102050322300904A97 /* Main.storyboard */; };
@@ -15,8 +16,6 @@
 		18E2ED1A2050322300904A97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2ED192050322300904A97 /* main.m */; };
 		18E2ED242050322300904A97 /* enmoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2ED232050322300904A97 /* enmoTests.m */; };
 		18E2ED2F2050322300904A97 /* enmoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2ED2E2050322300904A97 /* enmoUITests.m */; };
-		18E2ED3D2050324000904A97 /* enmo_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2ED3C2050324000904A97 /* enmo_sdk.framework */; };
-		18E2ED3E2050324000904A97 /* enmo_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18E2ED3C2050324000904A97 /* enmo_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +42,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18E2ED3E2050324000904A97 /* enmo_sdk.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18B6A98F20595BD600965C81 /* EnmoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EnmoSDK.framework; sourceTree = "<group>"; };
 		18E2ED072050322300904A97 /* enmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = enmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E2ED0A2050322300904A97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E2ED0B2050322300904A97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		18E2ED2A2050322300904A97 /* enmoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = enmoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E2ED2E2050322300904A97 /* enmoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = enmoUITests.m; sourceTree = "<group>"; };
 		18E2ED302050322300904A97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18E2ED3C2050324000904A97 /* enmo_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = enmo_sdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E2ED3D2050324000904A97 /* enmo_sdk.framework in Frameworks */,
+				18B6A99020595BD600965C81 /* EnmoSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +97,6 @@
 		18E2ECFE2050322300904A97 = {
 			isa = PBXGroup;
 			children = (
-				18E2ED3C2050324000904A97 /* enmo_sdk.framework */,
 				18E2ED092050322300904A97 /* enmo */,
 				18E2ED222050322300904A97 /* enmoTests */,
 				18E2ED2D2050322300904A97 /* enmoUITests */,
@@ -120,6 +117,7 @@
 		18E2ED092050322300904A97 /* enmo */ = {
 			isa = PBXGroup;
 			children = (
+				18B6A98F20595BD600965C81 /* EnmoSDK.framework */,
 				18E2ED0A2050322300904A97 /* AppDelegate.h */,
 				18E2ED0B2050322300904A97 /* AppDelegate.m */,
 				18E2ED0D2050322300904A97 /* ViewController.h */,
@@ -452,9 +450,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JH49GPFA72;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/enmo",
 				);
 				INFOPLIST_FILE = enmo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -470,9 +470,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JH49GPFA72;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/enmo",
 				);
 				INFOPLIST_FILE = enmo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,6 +519,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JH49GPFA72;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = enmoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fissionlabs.Newproject.enmoUITests;
@@ -531,6 +534,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JH49GPFA72;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = enmoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fissionlabs.Newproject.enmoUITests;
