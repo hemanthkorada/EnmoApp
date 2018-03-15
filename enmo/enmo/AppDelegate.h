@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EnmoSDK/EnmoSDK.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,EnmoManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

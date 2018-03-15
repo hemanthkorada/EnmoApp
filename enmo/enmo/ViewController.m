@@ -21,24 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
-    [EnmoManager.shared  start3rdPartyRanging];
-    [EnmoManager.shared  stop3rdPartyRanging];
-
-    
-    
-   // EnmoManager *fdsfv = [EnmoManager new];
-    
-
-    
-
-
-    
-   // [.shared start3rdPartyRanging];
-
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 
